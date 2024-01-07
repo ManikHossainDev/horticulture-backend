@@ -1,8 +1,10 @@
+import { useState } from "react";
 
 const UseStateExample = () => {
+    const [counter, setCounter] = useState(0)
     return (
         <div>
-            <h1>content</h1>
+            <h1>{counter}</h1>
         </div>
     );
 };
