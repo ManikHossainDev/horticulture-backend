@@ -1,4 +1,5 @@
-import { useRef,  } from "react";
+import { useEffect, useRef,  } from "react";
+import CustomInput from "./CustomInput";
 // useState import kor te comment ar code run kor jon
 // const UseRef = () => {
 //     const [count, setCount] = useState(0);
@@ -20,19 +21,17 @@ import { useRef,  } from "react";
 // };
 
 const UseRef = () => {
-  const myRef = useRef(null);
+  const myRef = useRef<HTMLInputElement | null>(null);
+  useEffect( () => {
+    myRef.current?.focus();
+  },[]);
 
   return (
     <div>
       <h1>useRef</h1>
       <form>
-        <input ref={myRef}
-          className="border border-red-300 rounded"
-          type="text"
-          name="name"
-          id="name"
-          value=""
-        />
+        <CustomInput inputRef={myRef}  className="border border-yellow-200 rounded"/>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
