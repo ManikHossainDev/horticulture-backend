@@ -20,18 +20,25 @@ import  { useEffect, useState } from 'react';
 // time set do data update done
 
 const UseEffectExample = () => {
+    const [hidden,setHidden] = useState(false);
+    return (
+        <div className=' flex items-center mt-11'>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => setHidden((prev)=> !prev)}>{hidden ? "Show" : "hide"}</button>
+          {!hidden &&  <Counter />}
+        </div>
+    );
+};
+
+const Counter = () => {
     const [count, setCount] = useState(0)
     useEffect(() => {
         setInterval(()=>{
             setCount((prev) => prev + 1 )
         }, 1000)
     },[])
-    return (
-        <div>
-            <h1>{count}</h1>
-        </div>
-    );
-};
+
+    return <h1 className='border border-red-500 rounded w-52 h-28 flex items-center justify-center py-1'>{count}</h1>
+}
 
 
 export default UseEffectExample;
