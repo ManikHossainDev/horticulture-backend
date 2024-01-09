@@ -24,22 +24,37 @@ const UseEffectExample = () => {
     return (
         <div className=' flex items-center mt-11'>
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => setHidden((prev)=> !prev)}>{hidden ? "Show" : "hide"}</button>
-          {!hidden &&  <Counter />}
+          {/* {!hidden &&  <Counter />} */}
+          {!hidden &&  <Todo />}
         </div>
     );
 };
-const Counter = () => {
-    const [count, setCount] = useState(0)
+// const Counter = () => {
+//     const [count, setCount] = useState(0)
+//     useEffect(() => {
+//        const IntervalId = setInterval(()=>{
+//             setCount((prev) => prev + 1 )
+//         }, 1000)
+//         return () => {
+//             clearInterval(IntervalId)
+//         }
+//     },[])
+
+//     return <h1 className='border border-red-500 rounded w-52 h-28 flex items-center justify-center py-1'>{count}</h1>
+// }
+
+const Todo = () =>{
+    const controller = new AbortController();
+    const signal = controller.signal;
     useEffect(() => {
-       const IntervalId = setInterval(()=>{
-            setCount((prev) => prev + 1 )
-        }, 1000)
+        fetch('https://jsonplaceholder.typicode.com/todos/1',{signal})
+        .then((res) => res.json())
+        .then((data)=> alert(data.title))
         return () => {
-            clearInterval(IntervalId)
+            controller.abort();
         }
     },[])
-
-    return <h1 className='border border-red-500 rounded w-52 h-28 flex items-center justify-center py-1'>{count}</h1>
+    return <h1 className='border border-red-500 rounded w-52 h-28 flex items-center justify-center py-1'>Todo</h1>
 }
 
 
