@@ -2,8 +2,10 @@
 
 import { useReducer } from "react";
 const initialState = {count:0}
-
-const reducer = (currentState : typeof initialState, action) => {
+type Taction = {
+    type :string;
+}
+const reducer = (currentState : typeof initialState, action:Taction) => {
  switch(action.type){
     case 'increment':
         return{count: currentState.count + 1 };

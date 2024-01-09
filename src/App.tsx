@@ -4,8 +4,9 @@ import "./App.css";
 import UseStateExample from "./page/UseStateExample";
 import UseStateFrom from "./page/UseStateFrom";
 import UseReducer from "./page/UseReducer";
-import UserFormReducer from "./page/userFormReducer";
-import UseEffectExample from "./page/UseEffectExample";
+import UseEffectExample from "./page/UseEffect";
+import UserFormReducer from "./page/UserFormReducer";
+import UseRef from "./page/UseRef";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -16,8 +17,8 @@ function App() {
       <UseStateFrom />
       <UseReducer />
       <UserFormReducer />
-
       <UseEffectExample />
+      <UseRef/>
     </>
   );
 }
