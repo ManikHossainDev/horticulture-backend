@@ -8,12 +8,12 @@ import "./App.css";
 // import UseEffectExample from "./page/UseEffect";
 // import UserFormReducer from "./page/UserFormReducer";
 import UseRef from "./page/UseRef";
-import { contextProvider } from "./context/ThemeProvider";
+import { contextProvider, contextUseState } from "./context/ThemeProvider";
 
 function App() {
   // const [counter, setCounter] = useState(0);
 
-  const {dark, setDark} = useContext(contextProvider)
+  const {dark, setDark} = useContext(contextProvider) as contextUseState
 
   return (
     < >

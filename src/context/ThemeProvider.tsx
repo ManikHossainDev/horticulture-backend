@@ -7,7 +7,7 @@ type contextProviderProps = {
     children: ReactNode
 }
 
-type contextUseState = {
+export type contextUseState = {
     dark:boolean;
     setDark: Dispatch<React.SetStateAction<boolean>>
 }
