@@ -17,14 +17,13 @@ import  { useEffect, useState } from 'react';
 //     );
 // };
 
+// time set do data update done
 
 const UseEffectExample = () => {
-     const [hidden, setHidden] = useState(false);
     const [count, setCount] = useState(0)
     useEffect(() => {
         setInterval(()=>{
-            console.log(count)
-            setCount(count + 1)
+            setCount((prev) => prev + 1 )
         }, 1000)
     },[])
     return (
