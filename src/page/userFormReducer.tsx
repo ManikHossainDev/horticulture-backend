@@ -20,7 +20,7 @@ const reducer = (currentState : typeof initialState, action:Taction) => {
 }
 
 
-const userFormReducer = () => {
+const UserFormReducer = () => {
     
     const [state, dispatch] = useReducer(reducer, initialState)
 
@@ -38,4 +38,4 @@ const userFormReducer = () => {
     );
 };
 
-export default userFormReducer;
+export default UserFormReducer;
