@@ -30,7 +30,7 @@ const UseRef = () => {
     <div>
       <h1>useRef</h1>
       <form>
-        <CustomInput inputRef={myRef}  className="border border-yellow-200 rounded"/>
+        <CustomInput ref={myRef}  className="border text-red-600 border-yellow-200 rounded" />
         <button type="submit">Submit</button>
       </form>
     </div>

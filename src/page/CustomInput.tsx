@@ -4,16 +4,16 @@ type inputCssStyle = {
     className: string;
 }
 
-const CustomInput = forwardRef<HTMLInputElement, inputCssStyle>(({className}, inputRef) => {
+const CustomInput = forwardRef<HTMLInputElement | null, inputCssStyle>(({className},inputRef) => {
     return (
         <div>
            <input 
-           ref={inputRef}
+         ref={inputRef}
           className={className}
           type="text"
           name="name"
           id="name"
-          value=""
+          
         /> 
         </div>
     );
