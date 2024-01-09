@@ -28,13 +28,15 @@ const UseEffectExample = () => {
         </div>
     );
 };
-
 const Counter = () => {
     const [count, setCount] = useState(0)
     useEffect(() => {
-        setInterval(()=>{
+       const IntervalId = setInterval(()=>{
             setCount((prev) => prev + 1 )
         }, 1000)
+        return () => {
+            clearInterval(IntervalId)
+        }
     },[])
 
     return <h1 className='border border-red-500 rounded w-52 h-28 flex items-center justify-center py-1'>{count}</h1>
