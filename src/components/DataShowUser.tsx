@@ -2,7 +2,7 @@
 
 const DataShowUser = ({isLoading, error , data}) => {
    
-    if(isLoading && !error){
+    if(!isLoading && !error){
         return <p>Loading...</p>
     }
    
