@@ -7,8 +7,9 @@ import "./App.css";
 // import UseReducer from "./page/UseReducer";
 // import UseEffectExample from "./page/UseEffect";
 // import UserFormReducer from "./page/UserFormReducer";
-import UseRef from "./page/UseRef";
+// import UseRef from "./page/UseRef";
 import { contextProvider, contextUseState } from "./context/ThemeProvider";
+import UsersContainer from "./components/UsersContainer";
 
 function App() {
   // const [counter, setCounter] = useState(0);
@@ -23,10 +24,12 @@ function App() {
       <UserFormReducer />
       <UseEffectExample /> */}
       {/* <UseRef /> */}
-      <div className={`h-screen w-full flex justify-center items-center ${dark ? "bg-black":"bg-white"}`}>
+      {/* <div className={`h-screen w-full flex justify-center items-center ${dark ? "bg-black":"bg-white"}`}>
       <button className="bg-blue-500" onClick={() => setDark(!dark)}>Toggle</button>
 
-      </div>
+      </div> */}
+
+      <UsersContainer />
     </>
   );
 }
