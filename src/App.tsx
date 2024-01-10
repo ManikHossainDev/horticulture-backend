@@ -2,6 +2,7 @@
 // import { useState } from "react";
 import { useContext } from "react";
 import "./App.css";
+
 // import UseStateExample from "./page/UseStateExample";
 // import UseStateFrom from "./page/UseStateFrom";
 // import UseReducer from "./page/UseReducer";
@@ -9,7 +10,7 @@ import "./App.css";
 // import UserFormReducer from "./page/UserFormReducer";
 // import UseRef from "./page/UseRef";
 import { contextProvider, contextUseState } from "./context/ThemeProvider";
-import UsersContainer from "./components/UsersContainer";
+import Select from "./components/Select";
 // import UsersContainer from "./components/UsersContainer";
 
 function App() {
@@ -31,6 +32,13 @@ function App() {
       </div>
 
       {/* <UsersContainer /> */}
+
+      <Select>
+        <Select.SelectOption value={Option1}>Option1</Select.SelectOption>
+        <Select.SelectOption value={Option2}>Option2</Select.SelectOption>
+        <Select.SelectOption value={Option3}>Option3</Select.SelectOption>
+        <Select.SelectOption value={Option4}>Option4</Select.SelectOption>
+      </Select>
     </>
   );
 }
