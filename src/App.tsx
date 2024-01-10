@@ -10,7 +10,7 @@ import "./App.css";
 // import UserFormReducer from "./page/UserFormReducer";
 // import UseRef from "./page/UseRef";
 import { contextProvider, contextUseState } from "./context/ThemeProvider";
-import Select from "./components/Select";
+// import Select from "./components/Select";
 // import UsersContainer from "./components/UsersContainer";
 
 function App() {
@@ -32,15 +32,17 @@ function App() {
       </div>
 
       {/* <UsersContainer /> */}
-
+{/* 
       <Select>
-        <Select.SelectOption value={"option1"}>Option1</Select.SelectOption>
-        <Select.SelectOption value={"option2"}>Option2</Select.SelectOption>
-        <Select.SelectOption value={"option3"}>Option3</Select.SelectOption>
-        <Select.SelectOption value={"option14"}>Option4</Select.SelectOption>
-      </Select>
+        <Select.SelectOption  value={'option1'}>Option1</Select.SelectOption>
+        <Select.SelectOption value={'option2'}>Option2</Select.SelectOption>
+        <Select.SelectOption value={'option3'}>Option3</Select.SelectOption>
+        <Select.SelectOption value={'option4'}>Option4</Select.SelectOption>
+      </Select> */}
     </>
   );
 }
+
+
 
 export default App;
